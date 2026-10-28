@@ -1,0 +1,149 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Profile Page</title>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>My Personal Profile Page</h1>
+        <p>Welcome to My Personal Website</p>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <a href="#about">About Me</a> |
+        <a href="#profile">My Profile</a> |
+        <a href="#form">User Form</a>
+    </nav>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <article>
+            <h2>About Me</h2>
+            <p>
+                Hello! My name is Alyani. I am a Computer Science
+                student at Universiti Malaysia Terengganu (UMT).
+            </p>
+            <p>
+                My hobbies include listening to music, watching movies,
+                taking photographs, enjoying nature, and riding motorcycles.
+            </p>
+        </article>
+    </section>
+
+    <!-- Personal Information Table -->
+    <section id="profile">
+        <h2>My Personal Information</h2>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Information</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Name</td>
+                    <td>Alyani</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Occupation</td>
+                    <td>Computer Science Student</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Institution</td>
+                    <td>Universiti Malaysia Terengganu (UMT)</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Hobbies</td>
+                    <td>Music, Movies, Photography</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- User Information Form -->
+    <section id="form">
+        <h2>User Information Form</h2>
+        <p>Please fill in the form below:</p>
+
+        <form action="#" method="post">
+
+            <!-- Text Input -->
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name"
+                   placeholder="Enter your name" required>
+            <br><br>
+
+            <!-- Email Input -->
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email" required>
+            <br><br>
+
+            <!-- Radio Buttons -->
+            <p>Gender:</p>
+
+            <input type="radio" id="male"
+                   name="gender" value="Male">
+            <label for="male">Male</label>
+
+            <input type="radio" id="female"
+                   name="gender" value="Female">
+            <label for="female">Female</label>
+
+            <!-- Checkboxes -->
+            <p>Favorite Hobbies:</p>
+
+            <input type="checkbox" id="music"
+                   name="hobbies" value="Music">
+            <label for="music">Listening to Music</label>
+            <br>
+
+            <input type="checkbox" id="movies"
+                   name="hobbies" value="Movies">
+            <label for="movies">Watching Movies</label>
+            <br>
+
+            <input type="checkbox" id="photography"
+                   name="hobbies" value="Photography">
+            <label for="photography">Photography</label>
+            <br>
+
+            <input type="checkbox" id="nature"
+                   name="hobbies" value="Nature">
+            <label for="nature">Enjoying Nature</label>
+            <br><br>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 My Personal Profile Page</p>
+        <p>Universiti Malaysia Terengganu (UMT)</p>
+    </footer>
+
+</body>
+</html>
