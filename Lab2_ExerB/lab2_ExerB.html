@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMT Course Feedback Page</title>
+</head>
+<body>
+
+    <!-- Error identification based on the original starter code:
+         1. Missing <!DOCTYPE html>.
+         2. Incorrect closing tag used for the header.
+         3. Rating heading used <td> instead of <th>.
+         4. Missing closing </tr> in a table row.
+         5. Incorrect colspan in the original topic row.
+         6. Incorrect table-cell markup in the original Semantic HTML row.
+         7. Label for="name" did not match input id="fullname".
+         8. Radio buttons had different name attributes.
+         9. Checkbox label did not match its input id.
+         10. Incorrect closing form tag.
+         11. Copyright entity was missing a semicolon.
+         Line numbers should be checked against the original lab handout.
+    -->
+
+    <!-- Header: Course title and introduction -->
+    <header>
+        <h1>UMT Course Feedback</h1>
+        <p>Share your learning experience and help us improve our classes.</p>
+        <p>Universiti Malaysia Terengganu (UMT)</p>
+    </header>
+
+    <!-- Navigation: Links to the page sections -->
+    <nav>
+        <a href="#ratings">Topic Ratings</a> |
+        <a href="#feedback">Feedback Form</a> |
+        <a href="#comments">Student Comments</a>
+    </nav>
+
+    <!-- Section Course Feedback Table -->
+    <section id="feedback">
+        <h2>Weekly Course Feedback</h2>
+
+        <table border="1">
+            <tr>
+                <th>Week</th>
+                <th>Topic</th>
+                <th>Rating</th>
+            </tr>
+
+            <tr>
+                <td>Week 1</td>
+                <td>Introduction to HTML</td>
+                <td>Excellent</td>
+            </tr>
+
+            <tr>
+                <td>Week 2</td>
+                <td>HTML Tables</td>
+                <td>Good</td>
+            </tr>
+
+            <tr>
+                <td>Week 3</td>
+                <td>HTML Forms</td>
+                <td>Good</td>
+            </tr>
+
+            <!-- New rows: Week 4 and Week 5 share the same topic -->
+            <tr>
+                <td>Week 4</td>
+                <td rowspan="2">Mini Project</td>
+                <td>Excellent</td>
+            </tr>
+
+            <tr>
+                <td>Week 5</td>
+                <td>Good</td>
+            </tr>
+
+            <!-- Final row: Average Rating spans two columns -->
+            <tr>
+                <td colspan="2"><strong>Average Rating</strong></td>
+                <td>Good</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Section 2: Student feedback form -->
+    <section id="feedback">
+        <h2>Feedback Form</h2>
+
+        <form action="#" method="post">
+
+            <p>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname"
+                       name="fullname" required>
+            </p>
+
+            <p>
+                <label for="matric">Matric Number:</label>
+                <input type="text" id="matric"
+                       name="matric" required>
+            </p>
+
+            <p>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email"
+                       name="email" required>
+            </p>
+
+            <fieldset>
+                <legend>How would you rate this course?</legend>
+
+                <input type="radio" id="rating-excellent"
+                       name="course-rating" value="Excellent" required>
+                <label for="rating-excellent">Excellent</label>
+
+                <input type="radio" id="rating-good"
+                       name="course-rating" value="Good" required>
+                <label for="rating-good">Good</label>
+
+                <input type="radio" id="rating-average"
+                       name="course-rating" value="Average">
+                <label for="rating-average">Average</label>
+
+                <input type="radio" id="rating-poor"
+                       name="course-rating" value="Poor">
+                <label for="rating-poor">Poor</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Topics I want more practice on</legend>
+
+                <input type="checkbox" id="topic-tables"
+                       name="practice-topics" value="Tables">
+                <label for="topic-tables">HTML Tables</label>
+                <br>
+
+                <input type="checkbox" id="topic-forms"
+                       name="practice-topics" value="Forms">
+                <label for="topic-forms">HTML Forms</label>
+                <br>
+
+                <input type="checkbox" id="topic-semantic"
+                       name="practice-topics" value="Semantic HTML">
+                <label for="topic-semantic">Semantic HTML</label>
+                <br>
+
+                <input type="checkbox" id="topic-validation"
+                       name="practice-topics" value="HTML Validation">
+                <label for="topic-validation">HTML Validation</label>
+            </fieldset>
+
+            <p>
+                <label for="section">Section / Group:</label>
+                <select id="section" name="section" required>
+                    <option value="">-- Select your section --</option>
+                    <option value="Section 1">Section 1</option>
+                    <option value="Section 2">Section 2</option>
+                    <option value="Section 3">Section 3</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="comments-text">Additional Feedback:</label>
+                <br>
+                <textarea id="comments-text" name="comments"
+                          rows="4" cols="40"></textarea>
+            </p>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </section>
+
+    <!-- Section 3: Comments from UMT students -->
+    <section id="comments">
+        <h2>Student Comments</h2>
+
+        <!-- Article 1: First student comment -->
+        <article>
+            <h3>Student: Aina</h3>
+            <p>
+                The HTML lab exercises helped me understand how to
+                organise a webpage using tables, forms, and semantic elements.
+            </p>
+        </article>
+
+        <!-- Article 2: Second student comment -->
+        <article>
+            <h3>Student: Najmi</h3>
+            <p>
+                I would like more practical exercises on form validation
+                and building complete webpages for university projects.
+            </p>
+        </article>
+
+        <!-- Article 3: Third student comment -->
+        <article>
+            <h3>Student: Syaliya</h3>
+            <p>
+                The lessons are easy to understand.
+                I enjoy learning how to create HTML tables.
+            </p>
+        </article>
+
+        <!-- Article 4: Fourth student comment -->
+        <article>
+            <h3>Student: Abbas</h3>
+            <p>
+                The practical activities help me improve my HTML skills.
+                I would like more exercises on HTML forms.
+            </p>
+        </article>
+    </section>
+
+    <!-- Footer: Copyright information -->
+    <footer>
+        <p>&copy; 2026 UMT Course Feedback Page.</p>
+    </footer>
+
+</body>
+</html>

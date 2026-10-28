@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMT Faculty Technology Day 2026</title>
+</head>
+<body>
+
+    <!-- Header: Event title and tagline -->
+    <header>
+        <h1>UMT Faculty Technology Day 2026</h1>
+        <p>Discover, Learn, and Innovate Together</p>
+        <p>Universiti Malaysia Terengganu (UMT)</p>
+    </header>
+
+    <!-- Navigation: Links to the main sections -->
+    <nav>
+        <a href="#about">About Event</a> |
+        <a href="#schedule">Event Schedule</a> |
+        <a href="#register">Registration</a>
+    </nav>
+
+    <!-- Section 1: Event information -->
+    <section id="about">
+        <h2>About Event</h2>
+
+        <!-- Article 1: Keynote speaker -->
+        <article>
+            <h3>Keynote Speaker: Dr. Ahmad Shukri</h3>
+            <p>
+                Dr. Ahmad Shukri will share ideas about current
+                technology trends, digital innovation, and the role
+                of computer science in solving real-world problems.
+            </p>
+        </article>
+
+        <!-- Article 2: Technology workshop -->
+        <article>
+            <h3>Hands-on Computer Workshop</h3>
+            <p>
+                Students will participate in practical activities
+                involving programming, web development, and
+                technology-based problem-solving.
+            </p>
+        </article>
+    </section>
+
+    <!-- Section 2: Event schedule -->
+    <section id="schedule">
+        <h2>Event Schedule</h2>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th scope="col">Time</th>
+                    <th scope="col">Activity</th>
+                    <th scope="col">Venue</th>
+                    <th scope="col">Person in Charge</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>8:00–8:30 AM</td>
+                    <td>Registration</td>
+                    <td>Dewan Sultan Mizan</td>
+                    <td>Secretariat Team</td>
+                </tr>
+
+                <tr>
+                    <td>8:30–9:00 AM</td>
+                    <td>Opening Ceremony</td>
+                    <td>Dewan Sultan Mizan</td>
+                    <td>Event Director</td>
+                </tr>
+
+                <tr>
+                    <td>9:00–10:00 AM</td>
+                    <td>Keynote Talk</td>
+                    <td rowspan="2">DP01</td>
+                    <td>Dr. Ahmad Shukri</td>
+                </tr>
+
+                <tr>
+                    <td>10:00–10:30 AM</td>
+                    <td>Technology Sharing Session</td>
+                    <td>Programme Coordinator</td>
+                </tr>
+
+                <tr>
+                    <td>10:30–11:00 AM</td>
+                    <td>Tea Break</td>
+                    <td>Foyer</td>
+                    <td>Hospitality Team</td>
+                </tr>
+
+                <tr>
+                    <td>11:00 AM–12:30 PM</td>
+                    <td>Hands-on Computer Workshop</td>
+                    <td>Cisco Lab</td>
+                    <td>Workshop Facilitator</td>
+                </tr>
+
+                <tr>
+                    <td>12:30–2:00 PM</td>
+                    <td colspan="3">Lunch Break</td>
+                </tr>
+
+                <tr>
+                    <td>2:00–3:30 PM</td>
+                    <td>Student Project Showcase</td>
+                    <td>Exhibition Area</td>
+                    <td>Project Committee</td>
+                </tr>
+
+                <tr>
+                    <td>3:30–4:00 PM</td>
+                    <td>Closing and Prize Presentation</td>
+                    <td>Dewan Sultan Mizan</td>
+                    <td>Event Director</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Section 3: Registration form -->
+    <section id="register">
+        <h2>Registration Form</h2>
+
+        <form action="register.html" method="post">
+
+            <p>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname"
+                       name="fullname" required>
+            </p>
+
+            <p>
+                <label for="matric">Matric Number:</label>
+                <input type="text" id="matric"
+                       name="matric" required>
+            </p>
+
+            <p>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email"
+                       name="email" required>
+            </p>
+
+            <fieldset>
+                <legend>Year of Study</legend>
+
+                <input type="radio" id="year1"
+                       name="year" value="Year 1" required>
+                <label for="year1">Year 1</label>
+
+                <input type="radio" id="year2"
+                       name="year" value="Year 2">
+                <label for="year2">Year 2</label>
+
+                <input type="radio" id="year3"
+                       name="year" value="Year 3">
+                <label for="year3">Year 3</label>
+
+                <input type="radio" id="year4"
+                       name="year" value="Year 4">
+                <label for="year4">Year 4</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Sessions to Attend</legend>
+
+                <input type="checkbox" id="keynote"
+                       name="sessions" value="Keynote Talk">
+                <label for="keynote">Keynote Talk</label>
+                <br>
+
+                <input type="checkbox" id="workshop"
+                       name="sessions" value="Computer Workshop">
+                <label for="workshop">Hands-on Computer Workshop</label>
+                <br>
+
+                <input type="checkbox" id="showcase"
+                       name="sessions" value="Project Showcase">
+                <label for="showcase">Student Project Showcase</label>
+            </fieldset>
+
+            <p>
+                <label for="programme">Programme / Faculty:</label>
+                <select id="programme" name="programme" required>
+                    <option value="">-- Select Programme --</option>
+                    <option value="Software Engineering">
+                        Computer Science (Software Engineering)
+                    </option>
+                    <option value="Maritime Informatics">
+                        Computer Science with Maritime Informatics
+                    </option>
+                    <option value="Mobile Computing">
+                        Computer Science (Mobile Computing)
+                    </option>
+                    <option value="Data Analytics">
+                        Science (Data Analytics)
+                    </option>
+                    <option value="Applied Mathematics">
+                        Science (Applied Mathematics)
+                    </option>
+                    <option value="Financial Mathematics">
+                        Science (Financial Mathematics)
+                    </option>
+                    <option value="Maritime Technology">
+                        Applied Science (Maritime Technology)
+                    </option>
+                    <option value="Other">Other UMT Programme</option>
+                </select>
+            </p>
+
+            <button type="submit">Submit Registration</button>
+        </form>
+    </section>
+
+    <!-- Footer: Organiser and copyright -->
+    <footer>
+        <p>Organised by the Faculty Event Committee, UMT</p>
+        <p>&copy; 2026 UMT Faculty Technology Day. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
