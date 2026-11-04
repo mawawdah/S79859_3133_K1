@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ticket Booking</title>
+</head>
+
+<body>
+
+    <!--
+    PART 1: ERRORS FOUND IN THE ORIGINAL CODE
+
+    Error 1 (Line 1): The DOCTYPE declaration was incomplete.
+    Fixed by using <!DOCTYPE html>.
+
+    Error 2 (Line 9): The span and h1 closing tags were in the
+    wrong order. The span must be inside the h1.
+
+    Error 3 (Line 11): A span was used as the main content container.
+    Replaced with a div.
+
+    Error 4 (Line 13): The less-than symbol was not written as &lt;.
+    The ampersand entity was also missing its semicolon.
+    Fixed using &lt; and &amp;.
+
+    Error 5 (Line 14): The form had no method specified.
+    Added method="post" and corrected the calculation so that
+    ticket quantities are added as numbers, not concatenated text.
+
+    Error 6 (Line 18): The email input type was misspelled as
+    "emial". Corrected to type="email" and added required.
+
+    Error 7 (Lines 22-23): The input referenced "movies" but the
+    datalist ID was "movielist". Both IDs must match.
+
+    Error 8 (Line 28-30): Ticket quantities did not have minimum
+    values. Added min="0" to both number inputs.
+
+    Error 9 (Line 32): The range slider had min="5" and max="1".
+    Corrected the minimum and maximum values.
+
+    Error 10 (Line 33): The output referenced "adult kid",
+    but the actual input IDs are "adult" and "child".
+
+    Error 11 (Line 38): HTML entities are case-sensitive.
+    Corrected &Copy; to &copy;.
+
+    Error 12: The original page did not include the requested
+    phone input, show time, movie sidebar and price output.
+    Added these elements for Part 2.
+    -->
+
+    <!-- Section 1: Page Header -->
+    <div id="header">
+        <h1>e-Ticket <span>Your Campus Cinema</span></h1>
+        <p>Book your favourite movie on campus!</p>
+    </div>
+
+    <!-- Section 2: Navigation -->
+    <div id="nav">
+        <a href="#booking">Book Ticket</a> |
+        <a href="#sidebar">Now Showing</a> |
+        <a href="#footer">Contact Information</a>
+    </div>
+
+    <hr>
+
+    <!-- Section 3: Main Content and Booking Form -->
+    <div id="content">
+
+        <h2 id="booking">Book Your Ticket</h2>
+
+        <p>
+            Promotion: Tickets &lt; RM10 for students
+            &amp; staff on selected promotions!
+        </p>
+
+        <!--
+        The oninput event updates both outputs whenever the
+        user changes the adult or child ticket quantity.
+        Adult ticket = RM12; child ticket = RM8.
+        -->
+        <form action="booking.php" method="post"
+              oninput="
+              document.getElementById('total').value =
+              (Number(document.getElementById('adult').value) || 0) +
+              (Number(document.getElementById('child').value) || 0);
+              document.getElementById('price').value =
+              ((Number(document.getElementById('adult').value) || 0) * 12) +
+              ((Number(document.getElementById('child').value) || 0) * 8)
+              ">
+
+            <!-- Customer name -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"
+                   placeholder="Enter your name"
+                   required autofocus>
+            <br><br>
+
+            <!-- Corrected email field -->
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email"
+                   required>
+            <br><br>
+
+            <!-- New phone number input -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="Enter your phone number"
+                   required>
+            <br><br>
+
+            <!-- Show date -->
+            <label for="date">Show Date:</label>
+            <input type="date" id="date" name="date" required>
+            <br><br>
+
+            <!-- New show time input -->
+            <label for="time">Show Time:</label>
+            <input type="time" id="time" name="time" required>
+            <br><br>
+
+            <!-- Corrected movie datalist -->
+            <label for="movie">Movie:</label>
+            <input type="text" id="movie" name="movie"
+                   list="movies" placeholder="Choose a movie"
+                   required>
+
+            <datalist id="movies">
+                <option value="Space Rangers">
+                <option value="Kampung Comedy">
+                <option value="Ocean Adventure">
+                <option value="Spiderman Brand New Day">
+            </datalist>
+
+            <br><br>
+
+            <!-- Adult ticket quantity -->
+            <label for="adult">Adult Tickets (RM12 each):</label>
+            <input type="number" id="adult" name="adult"
+                   min="0" value="0" required>
+            <br><br>
+
+            <!-- Child ticket quantity -->
+            <label for="child">Child Tickets (RM8 each):</label>
+            <input type="number" id="child" name="child"
+                   min="0" value="0" required>
+            <br><br>
+
+            <!-- Corrected service rating slider -->
+            <label for="rating">Rate Our Service (1-5):</label>
+            <input type="range" id="rating" name="rating"
+                   min="1" max="5" step="1" value="3">
+            <br><br>
+
+            <!-- Output 1: Total number of tickets -->
+            <label for="total">Total Tickets:</label>
+            <output id="total" name="total" for="adult child">0</output>
+            <br><br>
+
+            <!-- Output 2: Total ticket price -->
+            <label for="price">Total Price: RM</label>
+            <output id="price" name="price" for="adult child">0</output>
+            <br><br>
+
+            <!-- Submit booking -->
+            <input type="submit" value="Book Now">
+
+        </form>
+    </div>
+
+    <hr>
+
+    <!-- Section 4: Sidebar showing at least three movies -->
+    <div id="sidebar">
+        <h2>Now Showing</h2>
+
+        <ul>
+            <li>
+                <strong>Space Rangers</strong>
+                <span>PG</span> -
+                <a href="https://www.youtube.com/results?search_query=Space+Rangers+movie+trailer"
+                   target="_blank" rel="noopener noreferrer">
+                    Watch Trailer
+                </a>
+            </li>
+
+            <li>
+                <strong>Kampung Comedy</strong>
+                <span>PG</span> -
+                <a href="https://www.youtube.com/results?search_query=Kampung+Comedy+trailer"
+                   target="_blank" rel="noopener noreferrer">
+                    Watch Trailer
+                </a>
+            </li>
+
+            <li>
+                <strong>Ocean Adventure</strong>
+                <span>PG</span> -
+                <a href="https://www.youtube.com/results?search_query=Ocean+Adventure+movie+trailer"
+                   target="_blank" rel="noopener noreferrer">
+                    Watch Trailer
+                </a>
+            </li>
+
+            <li>
+                <strong>Spiderman Brand New Day</strong>
+                <span>PG</span> -
+                <a href="https://www.youtube.com/results?search_query=Spiderman+Brand+New+Day+movie+trailer"
+                   target="_blank" rel="noopener noreferrer">
+                    Watch Trailer
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <!-- Section 5: Footer with HTML entities -->
+    <div id="footer">
+        <p>
+            e-Ticket&reg; &ndash; Campus Cinema
+            &lt; RM10 every Tuesday
+        </p>
+
+        <p>Snacks &amp; drinks are available at the cinema.</p>
+
+        <p>&copy; 2026 CineKampus. All rights reserved.</p>
+    </div>
+
+    <!--
+    TESTING OBSERVATIONS
+
+    1. Submitting the form with required fields empty causes the
+       browser to request the missing information.
+
+    2. Entering "myemail" in the E-mail field is rejected by the
+       browser because it is not a valid email format.
+
+    3. Entering 2 adult tickets and 3 child tickets displays
+       Total Tickets: 5.
+
+    4. The same booking displays Total Price: RM48 because
+       (2 x RM12) + (3 x RM8) = RM48.
+
+    5. Movie suggestions appear because the input list attribute
+       matches the datalist ID.
+    -->
+
+</body>
+</html>
