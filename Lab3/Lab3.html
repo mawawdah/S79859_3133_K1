@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+</head>
+
+<body>
+
+<!-- Header Section -->
+<div class="header">
+<h1>Contact Us</h1>
+<span>We are here to help you!</span>
+</div>
+<hr>
+<!-- Content Section -->
+<div class="content">
+
+<h2>Contact Form</h2>
+
+<form>
+
+<!-- Email Address -->
+<label for="email">Email Address:</label>
+<input type="email" id="email" name="email"
+       placeholder="Enter your email" required>
+<br><br>
+
+<!-- Preferred Contact Date -->
+<label for="date">Preferred Contact Date:</label>
+<input type="date" id="date" name="date" required>
+<br><br>
+
+<!-- Satisfaction Level Label -->
+<label for="satisfaction">
+    Satisfaction Level:
+    <span id="level">5</span>/10
+</label>
+
+<br>
+
+<!-- Satisfaction Level Slider -->
+<input type="range" id="satisfaction"
+       name="satisfaction" min="0" max="10" value="5"
+       oninput="document.getElementById('level').textContent = this.value">
+
+<br><br>
+
+<button type="submit">Submit</button>
+</form>
+
+<hr>
+
+<!-- Inline Calculator -->
+<div>
+<h2>Simple Calculator</h2>
+
+<p>
+Please enter two numbers below. 
+The calculator will automatically calculate the sum.
+</p>
+
+<label for="num1">First Number:</label>
+<input type="number" id="num1" value="0"
+oninput="calculateSum()">
+
+<label for="num2">Second Number:</label>
+<input type="number" id="num2" value="0"
+oninput="calculateSum()">
+
+<p>
+Sum:
+<output id="result" for="num1 num2">0</output>
+</p>
+</div>
+
+</div>
+
+<hr>
+<!-- Footer Section -->
+<div class="footer">
+<p>Contact us: support@example.com</p>
+<p>&copy; 2026 Contact Us Website. All rights reserved.</p>
+</div>
+
+<script>
+function calculateSum() {
+const num1 = Number(document.getElementById("num1").value);
+const num2 = Number(document.getElementById("num2").value);
+
+document.getElementById("result").value = num1 + num2;
+}
+</script>
+
+</body>
+</html>
