@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A responsive UMT student profile webpage created for Lab Exercise 4.">
+    <title>UMT Student Profile | Lab Exercise 4</title>
+
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS: additional page-specific styling -->
+    <style>
+        .welcome-note {
+            background-color: #eaf6f5;
+            border-left: 5px solid #087f8c;
+            padding: 14px 18px;
+            border-radius: 6px;
+            margin: 18px 0;
+        }
+
+        .video-caption {
+            color: #52616b;
+            font-size: 0.92rem;
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        #form-message {
+            margin-top: 14px;
+            color: #087f5b;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header: website title and introduction -->
+    <header class="site-header" id="home">
+        <div class="container">
+            <p class="eyebrow">UNIVERSITI MALAYSIA TERENGGANU</p>
+            <h1>My Student Profile</h1>
+            <p class="header-description">
+                Welcome to my personal webpage. Explore my profile, interests and campus life.
+            </p>
+        </div>
+    </header>
+
+    <!-- Navigation: unordered list linking to page sections -->
+    <nav class="main-navigation" aria-label="Main navigation">
+        <div class="container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#video">Campus Video</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#contact">Contact Form</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- About section: semantic section and article elements -->
+        <section id="about" class="content-section">
+            <h2 class="section-title">About Me</h2>
+
+            <article class="profile-card">
+                <div class="profile-content">
+                    <h3>Hello, I'm Alyani!</h3>
+                    <p>
+                        I am a <strong>Computer Science student</strong> at
+                        <strong>Universiti Malaysia Terengganu (UMT)</strong>.
+                        I am interested in technology, programming and learning
+                        how digital solutions can solve real-world problems.
+                    </p>
+
+                    <div class="welcome-note">
+                        <p>
+                            <span class="highlight-text">My goal:</span>
+                            To improve my technical skills and become a creative
+                            and responsible technology professional.
+                        </p>
+                    </div>
+
+                    <p>
+                        I believe that continuous learning, teamwork and
+                        creativity are important for personal and professional growth.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Video section: video element with controls and subtitle track -->
+        <section id="video" class="content-section">
+            <h2 class="section-title">Discover Campus Life</h2>
+            <article class="video-card">
+                <figure>
+                    <video controls preload="metadata" poster="campus-poster.jpg">
+                        <source src="campus-introduction.mp4" type="video/mp4">
+                        <track
+                            src="captions.vtt"
+                            kind="captions"
+                            srclang="en"
+                            label="English"
+                            default>
+                        Your browser does not support the HTML video element.
+                    </video>
+                    <figcaption class="video-caption">
+                        Figure 1: A short introduction to campus life at UMT.
+                    </figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <!-- Hobbies section: text decoration examples -->
+        <section id="hobbies" class="content-section">
+            <h2 class="section-title">My Favorite Hobbies</h2>
+            <article class="hobby-card">
+                <p class="underline-text">Listening to music</p>
+                <p class="overline-text">Watching movies</p>
+                <p class="line-through-text">Taking photographs</p>
+                <p>Enjoying nature and riding motorcycles are also activities I enjoy.</p>
+            </article>
+        </section>
+
+        <!-- Contact section: interactive form -->
+        <section id="contact" class="content-section">
+            <h2 class="section-title">Contact Form</h2>
+            <article class="form-card">
+                <p>Please complete the form below to share your information and interests.</p>
+
+                <form id="student-form">
+                    <!-- Name text input -->
+                    <div class="form-group">
+                        <label for="student-name">Name:</label>
+                        <input
+                            type="text"
+                            id="student-name"
+                            name="studentName"
+                            placeholder="Enter your name"
+                            required>
+                    </div>
+
+                    <!-- Email text input -->
+                    <div class="form-group">
+                        <label for="student-email">Email:</label>
+                        <input
+                            type="email"
+                            id="student-email"
+                            name="studentEmail"
+                            placeholder="example@email.com"
+                            required>
+                    </div>
+
+                    <!-- Gender radio buttons -->
+                    <fieldset class="form-group">
+                        <legend>Gender:</legend>
+                        <label class="choice-label">
+                            <input type="radio" name="gender" value="Female" required>
+                            Female
+                        </label>
+                        <label class="choice-label">
+                            <input type="radio" name="gender" value="Male">
+                            Male
+                        </label>
+                    </fieldset>
+
+                    <!-- Favorite hobbies checkboxes -->
+                    <fieldset class="form-group">
+                        <legend>Favorite Hobbies:</legend>
+                        <label class="choice-label">
+                            <input type="checkbox" name="hobbies" value="Music">
+                            Listening to music
+                        </label>
+                        <label class="choice-label">
+                            <input type="checkbox" name="hobbies" value="Movies">
+                            Watching movies
+                        </label>
+                        <label class="choice-label">
+                            <input type="checkbox" name="hobbies" value="Photography">
+                            Photography
+                        </label>
+                        <label class="choice-label">
+                            <input type="checkbox" name="hobbies" value="Nature">
+                            Enjoying nature
+                        </label>
+                        <label class="choice-label">
+                            <input type="checkbox" name="hobbies" value="Motorcycling">
+                            Riding motorcycles
+                        </label>
+                    </fieldset>
+
+                    <!-- Submit button -->
+                    <button type="submit" class="submit-button">Submit</button>
+                    <p id="form-message" role="status" aria-live="polite"></p>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer: copyright and back-to-top link -->
+    <footer class="site-footer" id="footer">
+        <div class="container">
+            <p>&copy; 2026 My Student Profile | Universiti Malaysia Terengganu</p>
+            <p><a href="#home">Back to Top</a></p>
+        </div>
+    </footer>
+
+    <!-- Small client-side interaction for the demonstration form -->
+    <script>
+        const studentForm = document.getElementById("student-form");
+        const formMessage = document.getElementById("form-message");
+
+        studentForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            formMessage.textContent =
+                "Thank you! Your form has been completed successfully.";
+            studentForm.reset();
+        });
+    </script>
+</body>
+</html>

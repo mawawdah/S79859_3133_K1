@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visit Terengganu | Tourism Promotion</title>
+<link rel="stylesheet" href="style.css">
+<!-- Internal CSS: two page-specific rules required by the exercise. -->
+<style>
+#welcome-note { border-left: 5px solid #e09b36; padding: 12px 16px; }
+.page-subtitle { letter-spacing: 1px; text-align: center; }
+</style>
+</head>
+<body>
+<!-- Header section -->
+<header class="site-header">
+<h1>Visit Terengganu</h1>
+<p class="page-subtitle">Discover the beauty of the East Coast</p>
+<p id="welcome-note">Explore beautiful islands, local food and unforgettable culture.</p>
+</header>
+<!-- Navigation bar linking to each page section -->
+<nav class="main-nav" aria-label="Main navigation">
+<ul>
+<li><a href="#destinations">Destinations</a></li>
+<li><a href="#video">Video</a></li>
+<li><a href="#trip">Plan Your Trip</a></li>
+</ul>
+</nav>
+<main>
+<!-- Destinations section: each article contains a place, description and promotion price. -->
+<section id="destinations" class="section">
+<h2>Popular Destinations</h2>
+<p class="center">Choose your next getaway in Terengganu.</p>
+<div class="destination-grid">
+<article class="card">
+<h3>Redang Island</h3>
+<p>Enjoy clear blue water, white sandy beaches and colourful marine life.</p>
+<p class="price"><span class="old-price">RM 299</span> <strong>RM 199</strong> per person</p>
+</article>
+<article class="card">
+<h3>Perhentian Islands</h3>
+<p>Discover beautiful coral reefs and relaxing island surroundings.</p>
+<p class="price"><span class="old-price">RM 259</span> <strong>RM 179</strong> per person</p>
+</article>
+<article class="card">
+<h3>Kuala Terengganu</h3>
+<p>Visit local attractions, enjoy traditional food and experience the city's heritage.</p>
+<p class="price"><span class="old-price">RM 180</span> <strong>RM 120</strong> per person</p>
+</article>
+</div>
+<!-- Meter shows seats filled out of 40 available seats. -->
+<p class="seat-status">Trip seats filled: <meter min="0" max="40" value="28">28 out of 40</meter> 28 / 40 seats</p>
+</section>
+<!-- Video section: save a video named terengganu.mp4 in this folder. -->
+<section id="video" class="section video-section">
+<h2>Discover Terengganu</h2>
+<figure>
+<video controls width="640" height="360">
+<source src="terengganu.mp4" type="video/mp4">
+Your browser does not support HTML5 video. Please update your browser.
+</video>
+<figcaption class="caption">A glimpse of Terengganu's islands, beaches and local attractions.</figcaption>
+</figure>
+</section>
+<!-- Trip interest form with text, email, radio buttons and checkboxes. -->
+<section id="trip" class="section">
+<h2>Plan Your Trip</h2>
+<p>Tell us about your interests and we will help you plan your visit.</p>
+<form class="trip-form" action="#" method="post">
+<label for="visitor-name">Name</label>
+<input type="text" id="visitor-name" name="name" placeholder="Enter your name" required>
+<label for="visitor-email">E-mail</label>
+<input type="email" id="visitor-email" name="email" placeholder="name@example.com" required>
+<fieldset>
+<legend>Traveller Type</legend>
+<label><input type="radio" name="traveller-type" value="student" required> Student</label>
+<label><input type="radio" name="traveller-type" value="staff"> Staff</label>
+<label><input type="radio" name="traveller-type" value="public"> Public</label>
+</fieldset>
+<fieldset>
+<legend>Interests</legend>
+<label><input type="checkbox" name="interests" value="islands"> Islands</label>
+<label><input type="checkbox" name="interests" value="food"> Food</label>
+<label><input type="checkbox" name="interests" value="culture"> Culture</label>
+<label><input type="checkbox" name="interests" value="nature"> Nature</label>
+</fieldset>
+<button type="submit">Submit Interest</button>
+</form>
+</section>
+</main>
+<!-- Footer contains copyright and contact address with mailto link. -->
+<footer class="site-footer">
+<p>&copy; 2026 Visit Terengganu Tourism Promotion.</p>
+<address>Contact us: <a href="mailto:info@visit-terengganu.example">info@visit-terengganu.example</a></address>
+</footer>
+</body>
+</html>
